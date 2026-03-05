@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologias e Exemplos | LavagemPro</title>
+    <meta name="description"
+        content="Enciclopédia detalhada de métodos e tipologias de lavagem de dinheiro para fins educacionais.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exemplos.html" class="active">Métodos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="investigacao.html">Investigação</a></li>
+                <li><a href="glossario.html">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero secondary-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Enciclopédia de Tipologias</span>
+                <h1>Catálogo de <span class="highlight">Metodologias</span></h1>
+                <p>Uma análise profunda sobre as diversas formas que o branqueamento de capitais assume na economia
+                    global.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container methodology-nav">
+            <div class="method-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="complex">Altamente Complexo</button>
+                <button class="filter-btn" data-filter="financial">Financeiro</button>
+                <button class="filter-btn" data-filter="crypto">Cripto</button>
+                <button class="filter-btn" data-filter="trade">Comércio/TBML</button>
+                <button class="filter-btn" data-filter="charity">Terceiro Setor</button>
+                <button class="filter-btn" data-filter="engineering">Engenharia</button>
+            </div>
+        </div>
+
+        <section id="complex" class="section method-category" data-category="complex">
+            <div class="container">
+                <div class="section-header">
+                    <span>Engenharia de Ocultação</span>
+                    <h2>Estruturas Corporativas e Informais</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="network"></i>
+                            <h3>Sistemas Hawala</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Transferência de valor sem movimentação física de dinheiro
+                                através de redes de confiança (Hawaladars) em diferentes países.</p>
+                            <p><strong>PRÁTICA:</strong> O dinheiro entra em um ponto A e é liberado em um ponto B por
+                                um correspondente, baseando-se em compensação mútua futura.</p>
+                            <p><strong>ALERTA:</strong> Grandes volumes de dinheiro circulando em áreas de alta
+                                informalidade sem registro eletrônico.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="building-2"></i>
+                            <h3>Empresas de Prateleira (Shelf Companies)</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Empresas já constituídas e com histórico (CNPJ antigo)
+                                vendidas para lavadores para dar aparência de solidez e tempo de mercado.</p>
+                            <p><strong>PRÁTICA:</strong> Uso do histórico "limpo" para obter crédito bancário e
+                                contratos públicos fraudulentos.</p>
+                            <p><strong>ALERTA:</strong> Mudança repentina de sócios e de atividade econômica em empresas
+                                antigas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financial" class="section method-category" data-category="financial">
+            <div class="container">
+                <div class="section-header">
+                    <span>Sistemas Bancários e Fluxos</span>
+                    <h2>Setor Financeiro Tradicional</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="layers"></i>
+                            <h3>Fracionamento (Smurfing)</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Depósitos de valores abaixo de R$ 10.000,00 realizados por
+                                várias pessoas em diversas agências.</p>
+                            <p><strong>ALERTA:</strong> Sequência de depósitos rápidos que somados excedem a capacidade
+                                financeira declarada.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="git-branch"></i>
+                            <h3>Contas de Passagem</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Contas que recebem grandes volumes de crédito e os transferem
+                                imediatamente para outras contas, mantendo saldo zero ao fim do dia.</p>
+                            <p><strong>ALERTA:</strong> Ausência de despesas operacionais comuns (água, luz, aluguel) na
+                                conta.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="merge"></i>
+                            <h3>Mescla (Commingling)</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Misturar o caixa de um negócio legítimo (ex: estacionamentos)
+                                com fundos de origem ilícita para justificar a receita.</p>
+                            <p><strong>ALERTA:</strong> Margem de lucro muito acima da média do setor onde o negócio
+                                opera.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="crypto" class="section dark-bg method-category" data-category="crypto">
+            <div class="container">
+                <div class="section-header">
+                    <span>Ativos Digitais</span>
+                    <h2>Criptoativos e Web3</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="blender"></i>
+                            <h3>Mixers e Tumblers</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Serviços que misturam criptomoedas de origem "suja" com
+                                fundos de outros usuários antes de enviá-los ao destino final.</p>
+                            <p><strong>ALERTA:</strong> Recebimento de fundos de endereços identificados como serviços
+                                de embaralhamento.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="image"></i>
+                            <h3>Lavagem via NFTs</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Auto-compra de arte digital por valores inflados para
+                                converter cripto não rastreada em lucros de "investimento".</p>
+                            <p><strong>ALERTA:</strong> Transferência circular de fundos entre a carteira do comprador e
+                                a do vendedor.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="gamepad-2"></i>
+                            <h3>In-Game Currencies / Skins</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Compra de itens raros em jogos (Skins de CS, Ouro em MMOs)
+                                com cartões clonados ou cripto, e revenda em mercados secundários por dinheiro real.</p>
+                            <p><strong>PRÁTICA:</strong> O valor flui através de economias virtuais onde o monitoramento
+                                financeiro tradicional é quase inexistente.</p>
+                            <p><strong>ALERTA:</strong> Grandes volumes de transações em contas de jogadores com perfil
+                                de gasto incompatível com idade ou região.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="real-estate" class="section method-category" data-category="financial">
+            <div class="container">
+                <div class="section-header">
+                    <span>Ativos Físicos</span>
+                    <h2>Setor Imobiliário</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="home"></i>
+                            <h3>Subfaturamento na Escritura</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Declarar um valor menor no cartório e pagar a diferença em
+                                dinheiro vivo ("por fora") ao vendedor.</p>
+                            <p><strong>ALERTA:</strong> Imóveis vendidos por preços substancialmente abaixo do valor de
+                                mercado.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="hammer"></i>
+                            <h3>Reformas Superestimadas</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Contratação de reformas por valores irreais para justificar a
+                                saída e reentrada de capital "limpo" através de construtoras.</p>
+                            <p><strong>ALERTA:</strong> Pagamentos vultosos para prestadores de serviço sem estrutura
+                                física compatível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="charity" class="section dark-bg method-category" data-category="charity">
+            <div class="container">
+                <div class="section-header">
+                    <span>Organizações do Terceiro Setor</span>
+                    <h2>Abuso de Caridades</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="heart-handshake"></i>
+                            <h3>ONGs de Fachada</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Criação de entidades sem fins lucrativos fictícias para
+                                receber "doações" que na verdade são integração de capital ilícito.</p>
+                            <p><strong>ALERTA:</strong> ONGs com alta movimentação financeira mas sem impacto social
+                                comprovado ou sede física.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="engineering" class="section method-category" data-category="engineering">
+            <div class="container">
+                <div class="section-header left">
+                    <span>Engenharia Estrutural</span>
+                    <h2>Circuitos de Evasão</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="refresh-cw"></i>
+                            <h3>Esquema Loan-Back</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> O lavador envia dinheiro sujo para uma offshore e "empresta"
+                                o mesmo dinheiro de volta para sua empresa local, simulando uma dívida legítima.</p>
+                            <p><strong>ALERTA:</strong> Empréstimos vindos de jurisdições opacas com juros abaixo do
+                                mercado ou sem garantias.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="users"></i>
+                            <h3>Intermediação de Atletas</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Uso de contratos de passes esportivos para justificar
+                                pagamentos milionários a agentes e clubes de fachada no exterior.</p>
+                            <p><strong>ALERTA:</strong> Supervalorização repentina de atletas sem histórico expressivo
+                                de performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vices" class="section dark-bg method-category" data-category="vices">
+            <div class="container">
+                <div class="section-header left">
+                    <span>Jogos e Loterias</span>
+                    <h2>Sorte e Loterias</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="ticket"></i>
+                            <h3>Compra de Bilhetes Premiados</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> O lavador compra o bilhete de um ganhador real pagando um
+                                prêmio superior ao do sorteio, justificando seu patrimônio como "sorte".</p>
+                            <p><strong>ALERTA:</strong> Indivíduos que ganham na loteria múltiplas vezes em um curto
+                                período.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="dices"></i>
+                            <h3>Fichas de Cassino</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Compra massiva de fichas com dinheiro vivo, permanência curta
+                                no local e troca das fichas por cheques nominais do cassino.</p>
+                            <p><strong>ALERTA:</strong> Atividade de jogo mínima em relação ao volume de dinheiro
+                                trocado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trade" class="section method-category" data-category="trade">
+            <div class="container">
+                <div class="section-header left">
+                    <span>Trade-Based Money Laundering (TBML)</span>
+                    <h2>Comércio Internacional</h2>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="ship"></i>
+                            <h3>Faturamento Múltiplo</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Emissão de várias faturas para o mesmo embarque físico de
+                                mercadorias, permitindo múltiplos pagamentos internacionais.</p>
+                            <p><strong>ALERTA:</strong> Divergência entre o volume físico movimentado no porto e o
+                                volume financeiro liquidado.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass">
+                        <div class="method-header">
+                            <i data-lucide="container"></i>
+                            <h3>Sobre/Sub-Faturamento</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>A Técnica:</strong> Alterar o preço de mercadorias (ex: declarar eletrônicos como
+                                peças de plástico) para transferir valor entre fronteiras.</p>
+                            <p><strong>ALERTA:</strong> Preços declarados que discrepam drasticamente dos valores de
+                                mercado (Benchmarking de Preços).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="real-cases" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Inteligência Aplicada</span>
+                    <h2>Anatomia de Casos Reais</h2>
+                    <p>Análise técnica de esquemas que moldaram a jurisprudência e os controles de AML.</p>
+                </div>
+                <div class="method-grid">
+                    <div class="method-card glass highlight-card">
+                        <div class="method-header">
+                            <i data-lucide="repeat"></i>
+                            <h3>O Esquema "Dólar-Cabo"</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>CONTEXTO:</strong> Operação Câmbio, Desligo. Rede de doleiros que movimentou
+                                bilhões via compensação paralela.</p>
+                            <p><strong>MECANISMO:</strong> O dinheiro não cruza fronteiras fisicamente. O doleiro no
+                                Brasil recebe reais e orienta um parceiro no exterior a depositar dólares em uma conta
+                                offshore indicada pelo cliente.</p>
+                            <p><strong>BRECHA:</strong> Ausência de registros bancários eletrônicos diretos,
+                                substituídos por sistemas de contabilidade paralela.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass highlight-card">
+                        <div class="method-header">
+                            <i data-lucide="box"></i>
+                            <h3>TBML: O Caso das Importações</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>CONTEXTO:</strong> Uso de empresas comerciais para lavar capital de cartéis via
+                                comércio exterior.</p>
+                            <p><strong>MECANISMO:</strong> Uma empresa importa mercadorias de baixo valor, mas declara
+                                (e paga) valores exorbitantes para uma offshore controlada pelo próprio grupo.</p>
+                            <p><strong>BRECHA:</strong> Dificuldade das aduanas em realizar o benchmarking de preços de
+                                mercado para cada item específico importado.</p>
+                        </div>
+                    </div>
+                    <div class="method-card glass highlight-card">
+                        <div class="method-header">
+                            <i data-lucide="palette"></i>
+                            <h3>O Mercado de Arte (Lava Jato)</h3>
+                        </div>
+                        <div class="method-body">
+                            <p><strong>CONTEXTO:</strong> Apreensão de centenas de obras de arte em endereços de
+                                investigados por corrupção.</p>
+                            <p><strong>MECANISMO:</strong> Compra de quadros renomados por valores declarados ínfimos,
+                                seguidos de avaliações superestimadas para justificar lucros extraordinários.</p>
+                            <p><strong>BRECHA:</strong> Subjetividade total no valor dos ativos e permissividade
+                                histórica no sigilo de transações em galerias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Ferramentas de Investigação</h2>
+                    <p>Como os peritos rastreiam as evidências no mundo real e digital.</p>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card glass">
+                        <div class="tool-icon"><i data-lucide="microscope"></i></div>
+                        <h4>Análise Forense de Dados</h4>
+                        <p>Cruzamento de metadados de notas fiscais, logs de acesso bancário e registros de IP para
+                            reconstruir a cadeia de custódia do capital.</p>
+                    </div>
+                    <div class="tool-card glass">
+                        <div class="tool-icon"><i data-lucide="search-code"></i></div>
+                        <h4>OSINT (Open Source Intelligence)</h4>
+                        <p>Uso de informações públicas (redes sociais, frotas de aeronaves, registros de terra) para
+                            identificar sinais de riqueza não compatíveis.</p>
+                    </div>
+                    <div class="tool-card glass">
+                        <div class="tool-icon"><i data-lucide="git-branch-plus"></i></div>
+                        <h4>Mapas de Vínculos</h4>
+                        <p>Criação de grafos que conectam pessoas físicas, jurídicas e offshores através de endereços,
+                            sócios em comum e procuradores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Análise de Caso Técnico</h2>
+                    <p>Desconstruindo a arquitetura de um esquema fictício.</p>
+                </div>
+                <div class="case-flow glass">
+                    <div class="flow-step">
+                        <div class="step-icon">1</div>
+                        <h4>Origem</h4>
+                        <p>R$ 5 Milhões oriundos de corrupção em contratos públicos.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-icon">2</div>
+                        <h4>Camada 1</h4>
+                        <p>Fracionamento em 500 depósitos de R$ 10k em nomes de "laranjas".</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-icon">3</div>
+                        <h4>Camada 2</h4>
+                        <p>Transferência para empresa de fachada no Panamá (Offshore).</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-icon">4</div>
+                        <h4>Integração</h4>
+                        <p>Retorno ao Brasil como "Investimento Estrangeiro" em rede de hotéis.</p>
+                    </div>
+                </div>
+                <div class="case-conclusion">
+                    <div class="alert-box-warning">
+                        <i data-lucide="alert-triangle"></i>
+                        <div>
+                            <strong>Ponto de Quebra:</strong> O esquema seria detectado pelo COAF no passo 2 e 4 devido
+                            à falta de lastro econômico dos laranjas e à origem do capital estrangeiro.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Enciclopédia de tipologias e metodologias de crimes financeiros.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Filter logic for methods
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update cards/sections
+                document.querySelectorAll('.method-category').forEach(section => {
+                    if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

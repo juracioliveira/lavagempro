@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance e Governança AML | LavagemPro</title>
+    <meta name="description"
+        content="Guia técnico sobre prevenção à lavagem de dinheiro, regulação brasileira e protocolos de compliance.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exemplos.html">Métodos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="compliance.html" class="active">Compliance</a></li>
+                <li><a href="investigacao.html">Investigação</a></li>
+                <li><a href="glossario.html">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero secondary-hero compliance-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Regulação & Governança</span>
+                <h1>Arquitetura de <span class="highlight">Compliance AML</span></h1>
+                <p>O framework normativo e as barreiras institucionais que protegem a integridade do sistema financeiro
+                    global.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="abr" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>O Pilar do Compliance Moderno</span>
+                    <h2>Abordagem Baseada em Risco (ABR)</h2>
+                    <p>A transição do compliance punitivo para o compliance inteligente e preventivo.</p>
+                </div>
+                <div class="abr-grid">
+                    <div class="abr-card glass">
+                        <div class="abr-icon"><i data-lucide="target"></i></div>
+                        <h3>Identificação de Riscos</h3>
+                        <p>Mapeamento de vulnerabilidades em produtos, serviços, canais de distribuição e jurisdições
+                            operacionais.</p>
+                        <ul class="detail-list">
+                            <li>Avaliação interna de risco (AIR).</li>
+                            <li>Segmentação de clientes por perfil transacional.</li>
+                            <li>Matriz de risco inerente vs. residual.</li>
+                        </ul>
+                    </div>
+                    <div class="abr-card glass">
+                        <div class="abr-icon"><i data-lucide="activity"></i></div>
+                        <h3>Monitoramento Dinâmico</h3>
+                        <p>Não basta identificar; é preciso monitorar a evolução do risco em tempo real.</p>
+                        <ul class="detail-list">
+                            <li>Alertas baseados em desvio de comportamento.</li>
+                            <li>Atualização periódica de cadastros (Refresh).</li>
+                            <li>ECA (Enhanced Customer Analysis) para alto risco.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kyx" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Know Your Everything</span>
+                    <h2>A Família KYX</h2>
+                    <p>Os quatro pilares da identificação institucional.</p>
+                </div>
+                <div class="grid-4">
+                    <div class="card glass mini">
+                        <i data-lucide="users"></i>
+                        <h4>KYC</h4>
+                        <p><strong>Know Your Customer:</strong> Verificação de identidade e capacidade financeira.</p>
+                    </div>
+                    <div class="card glass mini">
+                        <i data-lucide="briefcase"></i>
+                        <h4>KYP</h4>
+                        <p><strong>Know Your Partner:</strong> Triagem de fornecedores e parceiros de negócio.</p>
+                    </div>
+                    <div class="card glass mini">
+                        <i data-lucide="user-check"></i>
+                        <h4>KYE</h4>
+                        <p><strong>Know Your Employee:</strong> Prevenção de riscos internos e conivência.</p>
+                    </div>
+                    <div class="card glass mini">
+                        <i data-lucide="database"></i>
+                        <h4>KYD</h4>
+                        <p><strong>Know Your Data:</strong> Integridade e rastreabilidade dos ativos digitais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="regulation" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Cenário Nacional</span>
+                    <h2>O Papel do COAF e BACEN</h2>
+                    <p>Como o Brasil se posiciona na rede global de inteligência financeira.</p>
+                </div>
+                <div class="reg-flow glass">
+                    <div class="reg-node">
+                        <div class="node-icon"><i data-lucide="landmark"></i></div>
+                        <h4>BACEN (BCB)</h4>
+                        <p><strong>Executor:</strong> Define as regras operacionais (Circular 3.978/20) para os bancos.
+                        </p>
+                    </div>
+                    <div class="reg-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="reg-node">
+                        <div class="node-icon"><i data-lucide="eye"></i></div>
+                        <h4>COAF (UIF)</h4>
+                        <p><strong>Inteligência:</strong> Recebe os RIFs (Relatórios de Inteligência Financeira) e
+                            analisa redes.</p>
+                    </div>
+                    <div class="reg-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="reg-node">
+                        <div class="node-icon"><i data-lucide="shield"></i></div>
+                        <h4>PF / MP</h4>
+                        <p><strong>Poder de Polícia:</strong> Inicia as investigações criminais com base nos dados do
+                            COAF.</p>
+                    </div>
+                </div>
+
+                <div class="red-flags-box glass mt-4">
+                    <h3>Gatilhos de Reporte Obrigatório (ROS/RIF)</h3>
+                    <div class="flags-grid">
+                        <div class="flag-item">
+                            <i data-lucide="alert-circle"></i>
+                            <p>Movimentações acima de R$ 50.000,00 em espécie (Comunicação Automática).</p>
+                        </div>
+                        <div class="flag-item">
+                            <i data-lucide="alert-circle"></i>
+                            <p>Operações sem fundamento econômico ou legal evidente.</p>
+                        </div>
+                        <div class="flag-item">
+                            <i data-lucide="alert-circle"></i>
+                            <p>Resistência injustificada em fornecer informações cadastrais.</p>
+                        </div>
+                        <div class="flag-item">
+                            <i data-lucide="alert-circle"></i>
+                            <p>Indícios de fragmentação para burlar limites de controle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dnfbp" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Além dos Bancos</span>
+                    <h2>Setores Obrigados (DNFBP)</h2>
+                    <p>Entidades não financeiras que possuem deveres legais de reporte ao COAF.</p>
+                </div>
+                <div class="grid-4">
+                    <div class="norm-card glass">
+                        <i data-lucide="gem"></i>
+                        <h4>Mercado de Luxo</h4>
+                        <p>Comércio de joias, metais preciosos, obras de arte e veículos de alto valor.</p>
+                    </div>
+                    <div class="norm-card glass">
+                        <i data-lucide="building"></i>
+                        <h4>Imobiliário</h4>
+                        <p>Incorporadoras, imobiliárias e corretores que facilitam a compra/venda de ativos físicos.</p>
+                    </div>
+                    <div class="norm-card glass">
+                        <i data-lucide="briefcase"></i>
+                        <h4>Gatekeepers</h4>
+                        <p>Contadores e advogados que administram fundos ou criam estruturas corporativas.</p>
+                    </div>
+                    <div class="norm-card glass">
+                        <i data-lucide="clover"></i>
+                        <h4>Sorte e Lazer</h4>
+                        <p>Casinos, bingos e promotores de eventos esportivos de grande porte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global-standards" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Padrões Internacionais</span>
+                    <h2>As 40 Recomendações do GAFI/FATF</h2>
+                    <p>O padrão ouro global para o combate à lavagem de dinheiro e financiamento ao terrorismo.</p>
+                </div>
+                <div class="gafi-grid">
+                    <div class="gafi-card glass">
+                        <div class="gafi-num">01</div>
+                        <h3>Avaliação de Risco Nacional</h3>
+                        <p>Cada país deve identificar e avaliar periodicamente seus riscos de ML/TF.</p>
+                    </div>
+                    <div class="gafi-card glass">
+                        <div class="gafi-num">10</div>
+                        <h3>Devida Diligência (CDD)</h3>
+                        <p>Instituições financeiras devem proibir contas anônimas e identificar o beneficiário final.
+                        </p>
+                    </div>
+                    <div class="gafi-card glass">
+                        <div class="gafi-num">15</div>
+                        <h3>Novas Tecnologias</h3>
+                        <p>Atenção especial a ativos virtuais (VASPs) e o cumprimento da "Travel Rule".</p>
+                    </div>
+                    <div class="gafi-card glass">
+                        <div class="gafi-num">20</div>
+                        <h3>Reporte de Operações Suspeitas</h3>
+                        <p>Obrigatoriedade de reporte sem "tipping-off" (alerta ao cliente).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sanctions" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Ferramentas de Dissuasão</span>
+                    <h2>Listas Restritivas e Sanções</h2>
+                    <p>O isolamento financeiro como arma contra o crime e o terrorismo.</p>
+                </div>
+                <div class="sanctions-comparison">
+                    <div class="sanction-side glass">
+                        <h4>OFAC (EUA)</h4>
+                        <ul class="check-list">
+                            <li>Lista SDN (Specially Designated Nationals).</li>
+                            <li>Bloqueio total de bens sob jurisdição americana.</li>
+                            <li>Implicações em transações via SWIFT/Dólar.</li>
+                        </ul>
+                    </div>
+                    <div class="sanction-side glass">
+                        <h4>ONU / CSNU</h4>
+                        <ul class="check-list">
+                            <li>Resoluções vinculantes para todos os membros.</li>
+                            <li>Foco em terrorismo e proliferação nuclear (ex: 1267).</li>
+                            <li>Congelamento imediato sem aviso prévio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ros-guide" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Ferramentas de Trabalho</span>
+                    <h2>Excelência em Reporte (ROS)</h2>
+                    <p>Como estruturar comunicações ao COAF que gerem valor para a inteligência financeira.</p>
+                </div>
+                <div class="ros-container glass">
+                    <div class="ros-theory">
+                        <h4>Os 5 Pilares da Descrição</h4>
+                        <ul class="detail-list">
+                            <li><strong>Identificação Clara:</strong> Qualificação completa das partes envolvidas.</li>
+                            <li><strong>Nexo Causal:</strong> Por que a operação destoa do perfil do cliente?</li>
+                            <li><strong>Rastreabilidade:</strong> De onde veio e para onde foi o capital (Fluxo).</li>
+                            <li><strong>Dilutilização:</strong> Evite termos vagos; use dados e fatos cronológicos.</li>
+                            <li><strong>Atenção ao Red Flag:</strong> Indique qual tipologia foi identificada.</li>
+                        </ul>
+                    </div>
+                    <div class="ros-sample">
+                        <div class="sample-header"><span>Exemplo de Texto de Reporte</span></div>
+                        <div class="sample-body">
+                            <p>"Identificamos movimentação atípica na conta corrente da empresa X (CNPJ...), consistente
+                                no
+                                recebimento de 15 depósitos fracionados em espécie, totalizando R$ 450k em 48h, seguidos
+                                de
+                                transferência imediata para offshore... A operação diverge do faturamento declarado e do
+                                histórico transacional..."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="regulatory-update" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Mantenha-se Informado</span>
+                    <h2>Central de Atualização Regulatória</h2>
+                    <p>As normativas mais recentes que regem o ecossistema de prevenção no Brasil e no mundo.</p>
+                </div>
+                <div class="update-feed">
+                    <div class="update-card glass">
+                        <div class="update-meta"><span>15 FEV 2026</span> <span class="badge-sm">BACEN</span></div>
+                        <h4>Revisão da Circular 3.978/20</h4>
+                        <p>Discussão sobre novos parâmetros de monitoramento para ativos virtuais e VASPs.</p>
+                        <a href="https://www.bcb.gov.br" target="_blank" class="text-link">Ver fonte original <i
+                                data-lucide="external-link"></i></a>
+                    </div>
+                    <div class="update-card glass">
+                        <div class="update-meta"><span>10 FEV 2026</span> <span class="badge-sm">GAFI</span></div>
+                        <h4>Avaliação Mútua do Brasil</h4>
+                        <p>Relatório final sobre a efetividade do sistema brasileiro de combate ao financiamento do
+                            terrorismo.</p>
+                        <a href="https://www.fatf-gafi.org" target="_blank" class="text-link">Acessar Relatório <i
+                                data-lucide="external-link"></i></a>
+                    </div>
+                    <div class="update-card glass">
+                        <div class="update-meta"><span>02 FEV 2026</span> <span class="badge-sm">COAF</span></div>
+                        <h4>Nova Tipologia: Mercado de Arte</h4>
+                        <p>Divulgação de novos indicadores de suspeição para o setor de bens de luxo e colecionáveis.
+                        </p>
+                        <a href="https://www.gov.br/coaf" target="_blank" class="text-link">Baixar PDF <i
+                                data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <span>Compliance Estratégico</span>
+                        <h2>Sua estrutura de PLD está atualizada?</h2>
+                        <p>Evite sanções regulatórias e proteja sua reputação. Solicite uma auditoria preventiva com
+                            nossos especialistas ex-reguladores.</p>
+                    </div>
+                    <div class="cta-btns">
+                        <a href="contato.html" class="btn primary">Solicitar Auditoria <i
+                                data-lucide="shield-check"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Iniciativa educacional para a transparência financeira.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

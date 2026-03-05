@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigação e Inteligência Financeira | LavagemPro</title>
+    <meta name="description"
+        content="Métodos avançados de investigação financeira, análise de vínculos e forense digital.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exemplos.html">Métodos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="investigacao.html" class="active">Investigação</a></li>
+                <li><a href="glossario.html">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero secondary-hero investigation-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Forensics & Intelligence</span>
+                <h1>A Ciência da <span class="highlight">Investigação Financeira</span></h1>
+                <p>Desconstruindo redes complexas através da análise de dados, grafos e inteligência artificial.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="link-analysis" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Mapeando Relacionamentos</span>
+                    <h2>Análise de Vínculos (Link Analysis)</h2>
+                    <p>Como transformar dados isolados em uma visão clara da rede criminosa.</p>
+                </div>
+                <div class="invest-grid">
+                    <div class="invest-card glass">
+                        <div class="invest-header">
+                            <i data-lucide="share-2"></i>
+                            <h3>Grafos de Conexão</h3>
+                        </div>
+                        <p>Identificação de nós (entidades) e arestas (transações) que revelam o fluxo oculto.</p>
+                        <ul class="detail-list">
+                            <li><strong>Sócio Comum:</strong> Empresas distintas controladas pela mesma pessoa.</li>
+                            <li><strong>Endereço Compartilhado:</strong> Sede virtual usada por dezenas de empresas de
+                                fachada.</li>
+                            <li><strong>Transferências Cruzadas:</strong> Dinheiro que circula entre entidades do mesmo
+                                grupo para simular atividade.</li>
+                        </ul>
+                    </div>
+                    <div class="invest-card glass">
+                        <div class="invest-header">
+                            <i data-lucide="network"></i>
+                            <h3>SNA (Social Network Analysis)</h3>
+                        </div>
+                        <p>Uso de métricas matemáticas para identificar o "cérebro" da operação.</p>
+                        <ul class="detail-list">
+                            <li><strong>Centralidade de Grau:</strong> Quem faz mais transações.</li>
+                            <li><strong>Centralidade de Intermediação (Betweenness):</strong> Quem conecta grupos
+                                isolados da rede.</li>
+                            <li><strong>Proximidade:</strong> Rapidez com que o capital flui do topo para as pontas.
+                        </ul>
+                    </div>
+                    <div class="invest-card glass">
+                        <div class="invest-header">
+                            <i data-lucide="user-x"></i>
+                            <h3>Identidades Sintéticas</h3>
+                        </div>
+                        <p>O uso de IAs generativas para criar perfis falsos que superam a biometria tradicional.</p>
+                        <ul class="detail-list">
+                            <li><strong>Deepfakes:</strong> Vídeos e áudios usados para contornar o "Liveness Check".
+                            </li>
+                            <li><strong>Data Poisoning:</strong> Inserção de dados falsos em bureau de crédito para
+                                criar CPFs "fantasmas".</li>
+                            <li><strong>KYC Bypass:</strong> Automação de abertura de contas em massa via robôs.</li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+
+        <section id="ubo" class="section">
+            <div class="container">
+                <div class="header-with-icon">
+                    <div class="section-header">
+                        <span>O Desafio da Identificação</span>
+                        <h2>Beneficiário Final (UBO)</h2>
+                        <p>A "Joia da Coroa" da investigação financeira: encontrar a pessoa física que exerce o controle
+                            último dos ativos.</p>
+                    </div>
+                </div>
+                <div class="ubo-model glass">
+                    <div class="ubo-onion">
+                        <div class="onion-layer layer-3"><span>Sociedade Operacional</span></div>
+                        <div class="onion-layer layer-2"><span>Holding / Offshore</span></div>
+                        <div class="onion-layer layer-1"><span>Trust / Fundação</span></div>
+                        <div class="onion-core"><span>UBO</span></div>
+                    </div>
+                    <div class="ubo-details">
+                        <div class="crit-box">
+                            <strong>Mecanismos de Ocultação:</strong>
+                            <ul class="check-list">
+                                <li><strong>Diretores Nomeados (Nominee):</strong> Profissionais remunerados apenas para
+                                    assinar documentos.</li>
+                                <li><strong>Participações Cruzadas:</strong> Empresa A é dona da B, que é dona da A.
+                                </li>
+                                <li><strong>Ações ao Portador:</strong> Embora em desuso, ainda existem em jurisdições
+                                    opacas.</li>
+                            </ul>
+                        </div>
+                        <div class="prec-box">
+                            <strong>Red Flags de "Laranjas":</strong>
+                            <ul class="check-list">
+                                <li>Sócios com patrimônio incompatível com o capital social.</li>
+                                <li>Endereços residenciais em áreas periféricas para empresas milionárias.</li>
+                                <li>Procurações com plenos poderes para terceiros não sócios.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="follow-the-money" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>O Princípio Fundamental</span>
+                    <h2>Doutrina "Follow the Money"</h2>
+                    <p>A trilha financeira é o único registro que o criminoso não consegue apagar completamente.</p>
+                </div>
+                <div class="doctrine-grid">
+                    <div class="doctrine-card glass">
+                        <h4>Mapeamento de Origem (Source)</h4>
+                        <p>Identificação do crime antecedente (tráfico, corrupção, evasão) através do primeiro ponto de
+                            entrada do capital.</p>
+                    </div>
+                    <div class="doctrine-card glass">
+                        <h4>Rastreio de Percurso (Path)</h4>
+                        <p>Análise de estratificação: uso de múltiplas contas, câmbio paralelo (Doleiros) e jurisdições
+                            offshore.</p>
+                    </div>
+                    <div class="doctrine-card glass">
+                        <h4>Localização de Destino (Destination)</h4>
+                        <p>Onde o dinheiro foi "limpo": imóveis, iates, joias ou reinvestimento em empresas lícitas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-investigation" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>O Futuro da Perícia</span>
+                    <h2>IA e Deep Learning na Investigação</h2>
+                    <p>Detectando padrões que escapam à percepção humana e à análise linear.</p>
+                </div>
+                <div class="ai-box glass">
+                    <div class="ai-item">
+                        <div class="ai-icon"><i data-lucide="brain-circuit"></i></div>
+                        <div>
+                            <h4>Detecção de Anomalias</h4>
+                            <p>Algoritmos de aprendizado não supervisionado que classificam transações como "fora do
+                                padrão" sem necessidade de regras pré-definidas.</p>
+                        </div>
+                    </div>
+                    <div class="ai-item">
+                        <div class="ai-icon"><i data-lucide="search-code"></i></div>
+                        <div>
+                            <h4>NLP (Processamento de Linguagem Natural)</h4>
+                            <p>Análise automatizada de milhares de contratos e e-mails para encontrar cláusulas de
+                                benefício oculto ou "side letters".</p>
+                        </div>
+                    </div>
+                    <div class="ai-item">
+                        <div class="ai-icon"><i data-lucide="git-merge"></i></div>
+                        <div>
+                            <h4>Entity Resolution</h4>
+                            <p>Identificação de que "João da Silva", "J. Silva" e "Joao S." em diferentes sistemas são
+                                na verdade a mesma pessoa física.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="forensic-tools" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Arsenal Pericial</span>
+                    <h2>Tecnologias de Ponta</h2>
+                    <p>As ferramentas utilizadas pelas Unidades de Inteligência Financeira e Polícia Federal.</p>
+                </div>
+                <div class="tools-horizontal-scroll">
+                    <div class="tool-item glass">
+                        <i data-lucide="database"></i>
+                        <h4>Labs-LD</h4>
+                        <p>Sistemas de processamento massivo de extratos bancários para detecção de fracionamento.</p>
+                    </div>
+                    <div class="tool-item glass">
+                        <i data-lucide="map"></i>
+                        <h4>Geointeligência</h4>
+                        <p>Cruzamento de locais de saque/depósito com áreas de atuação de facções criminosas.</p>
+                    </div>
+                    <div class="tool-item glass">
+                        <i data-lucide="cpu"></i>
+                        <h4>Blockchain Forensic</h4>
+                        <p>Visualização de clusters de transações em Bitcoin, Ethereum e Monero via Heurísticas de
+                            Inputs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cooperation" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Cooperação Internacional</span>
+                    <h2>Rede Egmont e Interpol</h2>
+                    <p>A troca de informações sigilosas entre UIFs em tempo recorde.</p>
+                </div>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <i data-lucide="globe"></i>
+                        <h4>Mutual Legal Assistance (MLAT)</h4>
+                        <p>Tratados que permitem a quebra de sigilo bancário em outros países via via diplomática.</p>
+                    </div>
+                    <div class="impact-item">
+                        <i data-lucide="zap"></i>
+                        <h4>Recuperação de Ativos (Asset Recovery)</h4>
+                        <p>O objetivo final da investigação: não apenas prender, mas descapitalizar o crime organizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <span>Investigação Especializada</span>
+                        <h2>Precisa rastrear fluxos financeiros complexos?</h2>
+                        <p>Nossa equipe utiliza as mesmas ferramentas de inteligência da Polícia Federal para desvendar
+                            estruturas de ocultação e recuperar ativos desviados.</p>
+                    </div>
+                    <div class="cta-btns">
+                        <a href="contato.html" class="btn primary">Iniciar Investigação Forense <i
+                                data-lucide="search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Onde a tecnologia encontra a justiça no combate ao crime financeiro.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavagem Digital e Criptoativos | LavagemPro</title>
+    <meta name="description"
+        content="As fronteiras tecnológicas da lavagem de dinheiro: Criptomoedas, NFTs, Gaming e Dark Web.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exemplos.html">Métodos</a></li>
+                <li><a href="digital.html" class="active">Digital</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="investigacao.html">Investigação</a></li>
+                <li><a href="glossario.html">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero secondary-hero digital-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Next-Gen Laundering</span>
+                <h1>A Era da <span class="highlight">Lavagem Digital</span></h1>
+                <p>Explorando o submundo dos ativos virtuais, mixers e a ofuscação algorítmica de trilhas financeiras.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="crypto-mixers" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Ofuscação Algorítmica</span>
+                    <h2>Mixers e Tumblers</h2>
+                    <p>Como serviços como o Tornado Cash quebram o rastro determinístico da blockchain.</p>
+                </div>
+                <div class="crypto-grid">
+                    <div class="crypto-card glass">
+                        <i data-lucide="shuffle"></i>
+                        <h3>O Mecanismo de Mistura</h3>
+                        <p>Usuários depositam fundos em um "pool" comum e recebem um comprovante criptográfico (note)
+                            para sacar em uma carteira nova, sem vínculo aparente.</p>
+                        <div class="tech-tag">Zero-Knowledge Proofs</div>
+                    </div>
+                    <div class="crypto-card glass">
+                        <i data-lucide="git-branch"></i>
+                        <h3>Chain-Hopping</h3>
+                        <p>Movimentação rápida entre diferentes redes (ex: Bitcoin -> Monero -> Ethereum) via pontes
+                            descentralizadas para dificultar a análise de fluxo contínuo.</p>
+                        <div class="tech-tag">Cross-Chain Bridges</div>
+                    </div>
+                    <div class="crypto-card glass">
+                        <i data-lucide="shield-off"></i>
+                        <h3>Privacy Coins</h3>
+                        <p>Criptoativos como Monero (XMR) que possuem anonimato nativo (Ring Signatures), tornando
+                            impossível ver valores ou participantes na rede.</p>
+                        <div class="tech-tag">Stealth Addresses</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nfts-wash" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Manipulação de Valor</span>
+                    <h2>NFTs e Wash Trading</h2>
+                    <p>A arte digital como o veículo perfeito para a integração de grandes volumes de capital.</p>
+                </div>
+                <div class="nft-logic glass">
+                    <div class="logic-step">
+                        <div class="logic-icon">01</div>
+                        <h4>Mineração</h4>
+                        <p>O lavador cria uma coleção de NFTs sem valor real.</p>
+                    </div>
+                    <div class="logic-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="logic-step">
+                        <div class="logic-icon">02</div>
+                        <h4>Auto-compra</h4>
+                        <p>Usa fundos sujos (cripto) para comprar seus próprios NFTs por preços exorbitantes.</p>
+                    </div>
+                    <div class="logic-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="logic-step">
+                        <div class="logic-icon">03</div>
+                        <h4>Lucro Lícito</h4>
+                        <p>O capital retorna como "ganho de capital em investimento de risco" perante o fisco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gaming-economies" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Economias Virtuais</span>
+                    <h2>Gaming & In-Game Assets</h2>
+                    <p>O uso de moedas de jogos e skins como meios de troca global fora dos radares de AML.</p>
+                </div>
+                <div class="gaming-grid">
+                    <div class="gaming-card glass">
+                        <div class="gaming-header">
+                            <i data-lucide="sword"></i>
+                            <h3>Skin Gambling</h3>
+                        </div>
+                        <p>Uso de itens raros (ex: CS:GO Skins) como fichas de cassinos clandestinos, convertidos
+                            posteriormente em dinheiro real via marketplaces P2P.</p>
+                    </div>
+                    <div class="gaming-card glass">
+                        <div class="gaming-header">
+                            <i data-lucide="gem"></i>
+                            <h3>Virtual Currency Muling</h3>
+                        </div>
+                        <p>Contratação de jogadores em países de baixa renda para "farmar" moedas que são usadas para
+                            lavar pequenos valores de forma pulverizada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cyber-laundering" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Nexo Cyber-Crime</span>
+                    <h2>Ransomware e Cashing-out</h2>
+                    <p>O ciclo completo: do ataque digital à lavagem dos frutos da extorsão.</p>
+                </div>
+                <div class="cyber-flow glass">
+                    <div class="flow-item">
+                        <i data-lucide="skull"></i>
+                        <h4>Extorsão</h4>
+                        <p>Invasão e criptografia de dados com pedido de resgate em Bitcoin.</p>
+                    </div>
+                    <div class="flow-item">
+                        <i data-lucide="repeat"></i>
+                        <h4>Obscurecimento</h4>
+                        <p>Passagem por Mixers e conversão para Monero (XMR).</p>
+                    </div>
+                    <div class="flow-item">
+                        <i data-lucide="banknote"></i>
+                        <h4>Fiat Exit</h4>
+                        <p>Uso de "Pizzarias" ou corretoras em jurisdições opacas para converter em moeda fiduciária.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dark-web" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>O Submundo</span>
+                    <h2>Dark Web & CaaS</h2>
+                    <p>Cybercrime-as-a-Service e a infraestrutura de apoio à lavagem digital.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card glass">
+                        <i data-lucide="terminal" class="card-icon"></i>
+                        <h3>Laundering-as-a-Service</h3>
+                        <p>Grupos especializados que oferecem o serviço completo de lavagem por uma comissão de 20% a
+                            50% do valor total.</p>
+                    </div>
+                    <div class="card glass">
+                        <i data-lucide="user-x" class="card-icon"></i>
+                        <h3>Drop Services</h3>
+                        <p>Redes de "Money Mules" recrutadas na dark web para fornecer contas bancárias reais para o
+                            saque do dinheiro sujo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <span>Inteligência Digital</span>
+                        <h2>Sua empresa opera com Criptoativos?</h2>
+                        <p>O monitoramento de blockchain exige ferramentas e conhecimentos especializados. Implementamos
+                            soluções de Blockchain Analytics para garantir que sua operação não seja utilizada por redes
+                            criminosas.</p>
+                    </div>
+                    <div class="cta-btns">
+                        <a href="contato.html" class="btn primary">Blindar Operação Cripto <i
+                                data-lucide="shield"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Desvendando as novas fronteiras do crime financeiro na era digital.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

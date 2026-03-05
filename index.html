@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LavagemPro | Informativo sobre Crimes Financeiros</title>
+    <meta name="description"
+        content="Portal informativo educacional sobre os mecanismos, fases e impactos da lavagem de dinheiro na economia global.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="exemplos.html">Métodos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="investigacao.html">Investigação</a></li>
+                <li><a href="glossario.html">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Inteligência Financeira & Risco</span>
+                <h1>O Ecossistema da <span class="highlight text-glow">Lavagem de Dinheiro</span></h1>
+                <p>Uma imersão técnica nos mecanismos de ocultação, estratificação e integração de capitais ilícitos no
+                    cenário global.</p>
+                <div class="hero-btns">
+                    <a href="#phases" class="btn primary">Explorar o Ciclo <i data-lucide="arrow-right"></i></a>
+                    <a href="investigacao.html" class="btn secondary">Técnicas Forenses</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="definition" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O que é?</h2>
+                    <p>Entenda o conceito fundamental por trás do crime de branqueamento de capitais.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card glass">
+                        <i data-lucide="banknote" class="card-icon"></i>
+                        <h3>Conceito Legal</h3>
+                        <p>A lavagem de dinheiro é o processo pelo qual o criminoso transforma o produto de infrações
+                            penais em recursos com aparência de legalidade.</p>
+                    </div>
+                    <div class="card glass">
+                        <i data-lucide="binary" class="card-icon"></i>
+                        <h3>Ocultação</h3>
+                        <p>Envolve a dissimulação da natureza, origem, localização, disposição, movimentação ou
+                            propriedade de bens, direitos ou valores provenientes, direta ou indiretamente, de infração
+                            penal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evolution" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>Marcos Históricos</span>
+                    <h2>Evolução do Combate Global</h2>
+                    <p>A transição de um crime focado no narcotráfico para uma ameaça sistêmica global.</p>
+                </div>
+                <div class="timeline-horizontal">
+                    <div class="timeline-node">
+                        <div class="year">1988</div>
+                        <div class="event">Convenção de Viena</div>
+                        <p>Criminalização da lavagem oriunda exclusivamente do tráfico de drogas.</p>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="year">1989</div>
+                        <div class="event">Criação do GAFI</div>
+                        <p>G7 funda o Financial Action Task Force para estabelecer padrões mundiais.</p>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="year">1998</div>
+                        <div class="event">Lei 9.613/98</div>
+                        <p>Brasil cria o COAF e estabelece a primeira lista de crimes antecedentes.</p>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="year">2012</div>
+                        <div class="event">Lei 12.683/12</div>
+                        <p>Modernização: fim do rol taxativo. Qualquer infração penal gera lavagem.</p>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="year">2020</div>
+                        <div class="event">Circular 3.978</div>
+                        <p>BACEN impõe a Abordagem Baseada em Risco (ABR) como padrão mandatório.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>A Escala do Problema</h2>
+                    <p>Dados que revelam a magnitude dos crimes financeiros globais.</p>
+                </div>
+                <div class="stats-infographic glass">
+                    <div class="stat-item-big">
+                        <div class="stat-value">2% - 5%</div>
+                        <div class="stat-label">Do PIB Mundial</div>
+                        <p>É o volume estimado de dinheiro lavado anualmente no mundo, segundo o UNODC.</p>
+                    </div>
+                    <div class="stats-grid-mini">
+                        <div class="mini-stat">
+                            <strong>$2 Tri</strong>
+                            <span>Dólares/ano</span>
+                        </div>
+                        <div class="mini-stat">
+                            <strong>80%</strong>
+                            <span>Não detectado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cyber" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nexo Cyber-Financeiro</h2>
+                    <p>A convergência entre ataques digitais e branqueamento de capitais.</p>
+                </div>
+                <div class="cyber-grid">
+                    <div class="cyber-card glass">
+                        <i data-lucide="skull"></i>
+                        <h3>Ransomware-as-a-Service</h3>
+                        <p>Pagamentos de extorsão digital que alimentam complexas redes de "cashing-out" através de
+                            cripto-mixers e corretoras na dark web.</p>
+                    </div>
+                    <div class="cyber-card glass">
+                        <i data-lucide="terminal"></i>
+                        <h3>Phishing & Fraude Pix</h3>
+                        <p>O uso de "contas de aluguel" (contas laranjas) para pulverizar rapidamente valores desviados
+                            de vítimas de engenharia social.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phases" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>As Três Fases Clássicas</h2>
+                    <p>O processo geralmente ocorre em três etapas interdependentes.</p>
+                </div>
+                <div class="phases-timeline">
+                    <div class="phase-item" data-delay="0">
+                        <div class="phase-number"><i data-lucide="log-in"></i></div>
+                        <div class="phase-content">
+                            <h3>Colocação (Placement)</h3>
+                            <p>O objetivo aqui é afastar o dinheiro de sua origem ilícita e introduzi-lo no sistema
+                                financeiro.</p>
+                            <div class="critical-info">
+                                <div class="crit-box">
+                                    <strong>Vulnerabilidade Crítica:</strong> É o momento de maior risco físico para o
+                                    criminoso devido ao volume de papel-moeda e à necessidade de contato com
+                                    instituições reguladas.
+                                </div>
+                                <div class="prec-box">
+                                    <strong>Precaução Institucional:</strong> Monitoramento rigoroso de depósitos
+                                    fracionados e limites de transação em espécie (Lei 12.863).
+                                </div>
+                            </div>
+                            <ul class="detail-list">
+                                <li><strong>Smurfing/Fracionamento:</strong> Divisão de grandes quantias em pequenos
+                                    depósitos para evitar gatilhos de reporte automático pelas instituições financeiras.
+                                </li>
+                                <li><strong>Composição de Receita:</strong> Misturar capital ilícito com o faturamento
+                                    legítimo de empresas que lidam com muito dinheiro em espécie (ex: bares,
+                                    lavanderias).</li>
+                                <li><strong>Aquisição de Ativos:</strong> Compra de bens de alto valor (joias, ouro,
+                                    obras de arte) com dinheiro vivo para posterior revenda.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="phase-item" data-delay="200">
+                        <div class="phase-number"><i data-lucide="layers"></i></div>
+                        <div class="phase-content">
+                            <h3>Ocultação / Estratificação (Layering)</h3>
+                            <p>A fase da "maquiagem". Criam-se camadas complexas de transações para romper o rastro de
+                                auditoria.</p>
+                            <div class="critical-info">
+                                <div class="crit-box">
+                                    <strong>Vulnerabilidade Crítica:</strong> Dependência de intermediários (contadores,
+                                    advogados) e o risco de rastro digital deixado em transferências SWIFT/Pix.
+                                </div>
+                                <div class="prec-box">
+                                    <strong>Precaução Institucional:</strong> Verificação de Beneficiário Final (UBO) e
+                                    monitoramento de jurisdições de alto risco.
+                                </div>
+                            </div>
+                            <ul class="detail-list">
+                                <li><strong>Empresas de Fachada (Shell Companies):</strong> Uso de empresas sem
+                                    atividade real em paraísos fiscais para circular fundos.</li>
+                                <li><strong>Empréstimos "Back-to-Back":</strong> O criminoso deposita valores em um
+                                    banco estrangeiro e toma um empréstimo legítimo usando esse depósito como garantia.
+                                </li>
+                                <li><strong>Transferências Eletrônicas em Série:</strong> Movimentação rápida entre
+                                    diversas jurisdições com leis bancárias menos rigorosas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="phase-item" data-delay="400">
+                        <div class="phase-number"><i data-lucide="check-circle"></i></div>
+                        <div class="phase-content">
+                            <h3>Integração (Integration)</h3>
+                            <p>O estágio final onde os ativos aparecem como riqueza legítima na economia.</p>
+                            <div class="critical-info">
+                                <div class="crit-box">
+                                    <strong>Vulnerabilidade Crítica:</strong> Exposição ao fisco. Grandes sinais de
+                                    riqueza sem lastro de renda declarada ativam o alerta de "Evolução Patrimonial
+                                    Incompatível".
+                                </div>
+                                <div class="prec-box">
+                                    <strong>Precaução Institucional:</strong> Verificação de Origem de Fundos (SoF) em
+                                    transações imobiliárias e investimentos de alto valor.
+                                </div>
+                            </div>
+                            <ul class="detail-list">
+                                <li><strong>Investimentos Imobiliários:</strong> Compra de imóveis por valores
+                                    subfaturados no papel, pagando a diferença "por fora" e revendendo pelo valor de
+                                    mercado.</li>
+                                <li><strong>Faturamento Fictício:</strong> Emissão de faturas por serviços nunca
+                                    prestados para justificar a entrada de dinheiro na conta de uma empresa.</li>
+                                <li><strong>Dividendos e Lucros:</strong> Distribuição de lucros de empresas que
+                                    serviram de duto para a lavagem ao longo das fases anteriores.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modern-methods" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tendências e Novos Métodos</h2>
+                    <p>A lavagem de dinheiro evoluiu com a tecnologia digital.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card glass mini" data-delay="0">
+                        <i data-lucide="bitcoin"></i>
+                        <h4>Criptoativos</h4>
+                        <p>Uso de "Mixers" ou "Tumblers" (embaralhadores) e corretoras sem KYC para ofuscar transações
+                            na blockchain.</p>
+                    </div>
+                    <div class="card glass mini" data-delay="200">
+                        <i data-lucide="gamepad-2"></i>
+                        <h4>Gaming em Massa</h4>
+                        <p>Uso de itens de jogos online (skins) e moedas virtuais como veículos de transferência de
+                            valor global.</p>
+                    </div>
+                    <div class="card glass mini" data-delay="400">
+                        <i data-lucide="palette"></i>
+                        <h4>NFTs e Arte Digital</h4>
+                        <p>Inflação artificial de preços em ativos digitais únicos para justificar a movimentação de
+                            grandes volumes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deep-dive" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mecanismos Técnicos Avançados</h2>
+                    <p>Explorando as táticas mais sofisticadas de ocultação financeira.</p>
+                </div>
+                <div class="technical-grid">
+                    <div class="tech-item glass">
+                        <div class="tech-header">
+                            <i data-lucide="ship"></i>
+                            <h3>Trade-Based Money Laundering (TBML)</h3>
+                        </div>
+                        <p>A lavagem de dinheiro baseada no comércio internacional é um dos métodos mais difíceis de
+                            detectar. Envolve a exploração de vulnerabilidades nos sistemas de comércio para movimentar
+                            valor através de mercadorias.</p>
+                        <ul class="detail-list">
+                            <li><strong>Superfaturamento / Subfaturamento:</strong> Alteração dos preços nas faturas
+                                para transferir valor entre exportador e importador.</li>
+                            <li><strong>Faturamento Múltiplo:</strong> Emissão de várias faturas para o mesmo embarque
+                                de mercadorias.</li>
+                            <li><strong>Phantom Shipping:</strong> Documentação de remessas de produtos que nunca foram
+                                enviados.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-item glass">
+                        <div class="tech-header">
+                            <i data-lucide="network"></i>
+                            <h3>Beneficiário Final (UBO)</h3>
+                        </div>
+                        <p>O conceito de <strong>Ultimate Beneficial Owner</strong> é o pilar do AML moderno.
+                            Identificar quem realmente controla ou se beneficia de uma entidade jurídica é o maior
+                            desafio das autoridades.</p>
+                        <ul class="detail-list">
+                            <li><strong>Camadas de Propriedade:</strong> Uso de múltiplas holdings em jurisdições
+                                diferentes (ex: Ilhas Virgens Britânicas -> Delaware -> Brasil).</li>
+                            <li><strong>Acordos de Nominação:</strong> Uso de testas-de-ferro (laranjas) profissionais
+                                para ocultar o real controlador.</li>
+                            <li><strong>Estruturas Off-shore:</strong> Trusts e fundações que oferecem anonimato legal
+                                aos seus beneficiários.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Regulação e Compliance (Back-end)</h2>
+                    <p>Os protocolos que as instituições devem seguir para evitar sanções.</p>
+                </div>
+                <div class="compliance-tabs">
+                    <div class="tab-content glass">
+                        <div class="tab-header">
+                            <i data-lucide="file-check"></i>
+                            <h3>Sinais de Alerta (Red Flags)</h3>
+                        </div>
+                        <div class="red-flags-grid">
+                            <div class="flag">
+                                <strong>Transacional</strong>
+                                <p>Mudança repentina no padrão de movimentação sem justificativa econômica clara.</p>
+                            </div>
+                            <div class="flag">
+                                <strong>Geográfico</strong>
+                                <p>Operações originadas ou destinadas a paraísos fiscais ou países com alto índice de
+                                    corrupção.</p>
+                            </div>
+                            <div class="flag">
+                                <strong>Comportamental</strong>
+                                <p>Clientes que relutam em fornecer informações sobre a origem dos fundos ou que mostram
+                                    conhecimento excessivo sobre limites de reporte.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prevention" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Framework Normativo Brasileiro</h2>
+                    <p>As diretrizes técnicas dos órgãos reguladores.</p>
+                </div>
+                <div class="normative-content">
+                    <div class="norm-card glass">
+                        <h4>BACEN - Circular 3.978/20</h4>
+                        <p>Estabelece a abordagem baseada em risco (ABR) e procedimentos de KYC, KYP (Parceiro) e KYE
+                            (Empregado).</p>
+                    </div>
+                    <div class="norm-card glass">
+                        <h4>CVM - Resolução 50/21</h4>
+                        <p>Normatiza a prevenção no mercado de capitais, focando na identificação de investidores e
+                            beneficiários finais.</p>
+                    </div>
+                    <div class="norm-card glass">
+                        <h4>SUSEP - Circular 612/20</h4>
+                        <p>Diretrizes para o setor de seguros, previdência aberta e capitalização.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="safety-guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Guia de Precauções Pessoais</h2>
+                    <p>Como profissionais e cidadãos podem evitar o envolvimento involuntário.</p>
+                </div>
+                <div class="safety-grid">
+                    <div class="safety-card glass alert">
+                        <i data-lucide="shield-off"></i>
+                        <h4>O Risco do "Laranja"</h4>
+                        <p>Nunca empreste sua conta bancária, CPF ou dados pessoais para terceiros realizarem
+                            movimentações, mesmo sob promessa de lucro ou favor a amigos. Você pode ser responsabilizado
+                            criminalmente.</p>
+                    </div>
+                    <div class="safety-card glass">
+                        <i data-lucide="briefcase"></i>
+                        <h4>Para Profissionais Liberais</h4>
+                        <p>Advogados, contadores e corretores devem atentar para pagamentos em espécie por honorários ou
+                            bens. A "cegueira deliberada" (ignorar a origem suspeita) não isenta de punição.</p>
+                    </div>
+                    <div class="safety-card glass">
+                        <i data-lucide="shopping-cart"></i>
+                        <h4>Venda de Bens de Valor</h4>
+                        <p>Ao vender um veículo ou imóvel, exija que o pagamento venha diretamente da conta do
+                            comprador. Recuse depósitos fracionados em dinheiro de múltiplos nomes desconhecidos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Estudos de Caso Teóricos</h2>
+                    <p>Exemplos práticos para facilitar a compreensão dos mecanismos.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card glass case">
+                        <div class="case-tag">Cenário A</div>
+                        <h3>A "Lavanderia" de Serviços</h3>
+                        <p>Um criminoso utiliza um restaurante de fachada. Ele simula centenas de vendas fictícias em
+                            dinheiro vivo todos os dias, misturando o lucro do tráfico com o faturamento real do
+                            negócio.</p>
+                        <div class="case-phases">
+                            <span><i data-lucide="arrow-right"></i> Colocação</span>
+                        </div>
+                    </div>
+                    <div class="card glass case">
+                        <div class="case-tag">Cenário B</div>
+                        <h3>O Colecionador Digital</h3>
+                        <p>Através de uma conta anônima, ativos de origem ilícita são usados para comprar um NFT por um
+                            valor exorbitante de si mesmo (usando outra conta), justificando o ganho de capital como
+                            "lucro de investimento".</p>
+                        <div class="case-phases">
+                            <span><i data-lucide="arrow-right"></i> Ocultação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perguntas Frequentes</h2>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Qual a diferença entre Evasão de Divisas e Lavagem de Dinheiro?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>A evasão de divisas foca na saída não autorizada de moeda do país, enquanto a lavagem
+                                foca em ocultar a origem criminosa do dinheiro, independentemente de ele sair ou não do
+                                território nacional.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Apenas grandes valores são considerados lavagem?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Não. A lei brasileira não estabelece um valor mínimo. O crime é configurado pelo ato de
+                                ocultar ou dissimular a origem de ativos oriundos de infração penal, independente da
+                                quantia.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>O que são as "Pessoas Politicamente Expostas" (PPE)?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>São indivíduos que desempenham ou desempenharam funções públicas relevantes. Devido à sua
+                                posição, são submetidos a um monitoramento mais rigoroso pelas instituições financeiras
+                                para prevenir corrupção e lavagem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O Futuro: RegTech & IA</h2>
+                    <p>Como a tecnologia de ponta está virando o jogo contra o crime financeiro.</p>
+                </div>
+                <div class="tech-grid-new">
+                    <div class="tech-card-modern glass">
+                        <div class="icon-wrap"><i data-lucide="brain-circuit"></i></div>
+                        <h3>Inteligência Artificial</h3>
+                        <p>Algoritmos de Deep Learning que cruzam trilhões de transações para identificar redes de
+                            lavagem que seriam invisíveis ao olho humano.</p>
+                    </div>
+                    <div class="tech-card-modern glass">
+                        <div class="icon-wrap"><i data-lucide="link-2"></i></div>
+                        <h3>Blockchain Analytics</h3>
+                        <p>Ferramentas que "deseletrizam" transações cripto, mapeando o fluxo de fundos desde a carteira
+                            de origem até os pontos de saída em moedas estatais.</p>
+                    </div>
+                    <div class="tech-card-modern glass">
+                        <div class="icon-wrap"><i data-lucide="cpu"></i></div>
+                        <h3>RegTech (Regulatory Tech)</h3>
+                        <p>Automação de processos de compliance que reduzem o erro humano e garantem o reporte de
+                            operações suspeitas em tempo real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Cooperação Global</h2>
+                    <p>O crime não tem fronteiras, e a justiça também não.</p>
+                </div>
+                <div class="global-network glass">
+                    <div class="network-item">
+                        <i data-lucide="landmark"></i>
+                        <h4>Grupo de Egmont</h4>
+                        <p>Rede global de Unidades de Inteligência Financeira (UIFs) que compartilham informações
+                            sigilosas entre países.</p>
+                    </div>
+                    <div class="network-item">
+                        <i data-lucide="shield-check"></i>
+                        <h4>Interpol / Europol</h4>
+                        <p>Coordenação operacional para capturar lavadores de dinheiro que operam em múltiplas
+                            jurisdições.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="glossary" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Glossário de Termos</h2>
+                    <p>Os acrônimos e conceitos que você precisa conhecer.</p>
+                </div>
+                <div class="glossary-grid">
+                    <div class="glossary-item"><strong>AML/PLD</strong><span>Prevenção à Lavagem de Dinheiro (Anti-Money
+                            Laundering).</span></div>
+                    <div class="glossary-item"><strong>CFT</strong><span>Combate ao Financiamento do Terrorismo.</span>
+                    </div>
+                    <div class="glossary-item"><strong>KYC</strong><span>"Know Your Customer" – Conheça seu
+                            Cliente.</span></div>
+                    <div class="glossary-item"><strong>UBO</strong><span>"Ultimate Beneficial Owner" – Beneficiário
+                            Final.</span></div>
+                    <div class="glossary-item"><strong>SoF</strong><span>"Source of Funds" – Origem dos Recursos.</span>
+                    </div>
+                    <div class="glossary-item"><strong>PEP/PPE</strong><span>Pessoa Politicamente Exposta.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Impacto Socioeconômico</h2>
+                </div>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <i data-lucide="trending-down"></i>
+                        <p>Distorção de preços e concorrência desleal com empresas legítimas.</p>
+                    </div>
+                    <div class="impact-item">
+                        <i data-lucide="alert-triangle"></i>
+                        <p>Alimentação do tráfico de drogas, armas e seres humanos.</p>
+                    </div>
+                    <div class="impact-item">
+                        <i data-lucide="landmark"></i>
+                        <p>Risco de desestabilização de bancos e mercados de capitais.</p>
+                    </div>
+                    <div class="impact-item">
+                        <i data-lucide="users"></i>
+                        <p>Redução do investimento estrangeiro devido à insegurança jurídica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sanctions" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sanções e Listas Restritivas</h2>
+                    <p>O isolamento financeiro como ferramenta de dissuasão.</p>
+                </div>
+                <div class="sanctions-radar glass">
+                    <div class="radar-header">
+                        <i data-lucide="zap" class="radar-icon"></i>
+                        <span>SANCTIONS RADAR (Real-Time)</span>
+                    </div>
+                    <div class="radar-feed">
+                        <p id="sanctions-feed">Inicializando feed de inteligência global...</p>
+                    </div>
+                </div>
+
+                <div class="sanctions-grid">
+                    <div class="sanction-card glass">
+                        <div class="sanction-icon"><i data-lucide="globe"></i></div>
+                        <h3>Listas da ONU</h3>
+                        <p>Sanções vinculantes contra indivíduos e entidades ligados ao terrorismo e proliferação de
+                            armas.</p>
+                    </div>
+                    <div class="sanction-card glass">
+                        <div class="sanction-icon"><i data-lucide="landmark"></i></div>
+                        <h3>OFAC (EUA)</h3>
+                        <p>O "Standard" global. Sanções do Tesouro Americano que podem paralisar operações em dólar.</p>
+                    </div>
+                    <div class="sanction-card glass">
+                        <div class="sanction-icon"><i data-lucide="alert-octagon"></i></div>
+                        <h3>Países Não Cooperantes</h3>
+                        <p>A "Lista Cinza" e "Lista Negra" do GAFI para jurisdições com deficiências estratégicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risk-map" class="section highlight-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mapa Global de Risco (AML)</h2>
+                    <p>Jurisdições de alto risco e listas de monitoramento internacional.</p>
+                </div>
+                <div class="risk-map-widget glass">
+                    <div class="map-controls">
+                        <button class="map-btn active" onclick="updateMap('grey')">Lista Cinza (GAFI)</button>
+                        <button class="map-btn" onclick="updateMap('black')">Lista Negra</button>
+                        <button class="map-btn" onclick="updateMap('secrecy')">Sigilo Bancário</button>
+                    </div>
+                    <div class="map-display">
+                        <div id="country-info" class="glass">
+                            <h4 id="country-name">Selecione uma Região</h4>
+                            <p id="country-desc">Passe o mouse ou clique para ver detalhes sobre o status regulatório.
+                            </p>
+                        </div>
+                        <div class="map-placeholder">
+                            <!-- Simplified map nodes -->
+                            <div class="map-node grey" data-country="Nigéria"
+                                data-info="País sob monitoramento intensificado pelo GAFI."></div>
+                            <div class="map-node black" data-country="Coreia do Norte"
+                                data-info="Jurisdição de alto risco sujeita a contramedidas severas."></div>
+                            <div class="map-node secrecy" data-country="Ilhas Virgens Britânicas"
+                                data-info="Conhecido por estruturas offshore e sigilo absoluto."></div>
+                            <div class="map-node grey" data-country="Filipinas"
+                                data-info="Deficiências estratégicas em regimes de PLD/FT."></div>
+                            <div class="map-node black" data-country="Irã"
+                                data-info="Risco sistêmico para o sistema financeiro global."></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulator" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simulador de Estrutura de Concha</h2>
+                    <p>Tente montar uma estrutura de ocultação e veja se ela é detectável.</p>
+                </div>
+                <div class="simulator-box glass">
+                    <div class="sim-content">
+                        <div class="sim-steps">
+                            <div class="sim-step">
+                                <span>1. Jurisdição</span>
+                                <select id="sim-loc">
+                                    <option value="10">Jurisdição Transparente (Brasil)</option>
+                                    <option value="50">Paraíso Fiscal (Belize)</option>
+                                    <option value="80">Zero Transparência (Ilhas Cook)</option>
+                                </select>
+                            </div>
+                            <div class="sim-step">
+                                <span>2. Tipo de Entidade</span>
+                                <select id="sim-type">
+                                    <option value="20">Sociedade Limitada</option>
+                                    <option value="60">Trust Internacional</option>
+                                    <option value="90">Fundação com Ações ao Portador</option>
+                                </select>
+                            </div>
+                            <div class="sim-step">
+                                <span>3. Complexidade (Camadas)</span>
+                                <select id="sim-layers">
+                                    <option value="1">Propriedade Direta</option>
+                                    <option value="2">2 Camadas Offshore</option>
+                                    <option value="3">3+ Camadas em Cascata</option>
+                                </select>
+                            </div>
+                            <button class="btn primary full-width" onclick="calculateSim()">Gerar Análise e
+                                Diagrama</button>
+                        </div>
+                        <div class="sim-visual">
+                            <canvas id="sim-canvas" width="300" height="250"></canvas>
+                            <div id="sim-score" class="hidden">
+                                <div class="score-radial">
+                                    <span id="score-val">0%</span>
+                                </div>
+                                <p id="score-text">Defina a estrutura para análise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Desafio do Investigador</h2>
+                <p>Teste seus conhecimentos identificando sinais de alerta em cenários reais.</p>
+            </div>
+            <div class="quiz-container glass">
+                <div id="quiz-screen">
+                    <div class="quiz-question">
+                        <span class="q-count">Cenário 01/01</span>
+                        <h3>Um novo cliente deseja abrir uma conta PJ para uma empresa de consultoria e pretende
+                            realizar um aporte inicial de R$ 500.000,00 em espécie (dinheiro vivo). O que você faz?
+                        </h3>
+                    </div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkQuiz(false)">Aceita o depósito, afinal é faturamento
+                            da empresa.</button>
+                        <button class="quiz-btn" onclick="checkQuiz(true)">Recusa e emite um Reporte de Operação
+                            Suspeita (ROS) ao COAF.</button>
+                        <button class="quiz-btn" onclick="checkQuiz(false)">Sugere que ele deposite em valores
+                            menores ao longo da semana.</button>
+                    </div>
+                </div>
+                <div id="quiz-result" class="hidden">
+                    <div class="result-header">
+                        <i data-lucide="check-circle" class="correct-icon"></i>
+                        <h3>Excelente Identificação!</h3>
+                    </div>
+                    <p>Depósitos vultosos em espécie sem origem clara são o maior Red Flag da fase de Colocação.
+                        Facilitar o fracionamento (terceira opção) seria cumplicidade criminosa.</p>
+                    <button class="report-btn" onclick="resetQuiz()">Tentar outro cenário</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="checklist" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Checklist de Validação KYC</h2>
+                    <p>Ferramenta prática para triagem de risco de novos clientes e parceiros.</p>
+                </div>
+                <div class="checklist-box glass">
+                    <div class="checklist-items">
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Identificação do Beneficiário Final (UBO) confirmada?
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Cliente é Pessoa Politicamente Exposta (PPE)?
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Origem dos Recursos (SoF) devidamente documentada?
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Jurisdição de origem está na "Lista Cinza" do GAFI?
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Atividade econômica é de alto risco (Ex: Joalheria, Cripto)?
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Transações vultosas em espécie são recorrentes?
+                        </label>
+                    </div>
+                    <div class="checklist-footer">
+                        <div id="risk-meter">Classificação: <span>Selecione os itens</span></div>
+                        <button class="btn secondary btn-sm" onclick="generateReport()">Gerar PDF de Risco</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="section dark-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span>Arsenal de Inteligência</span>
+                    <h2>Radar de Ferramentas de Investigação</h2>
+                    <p>Conheça os sistemas de elite utilizados por unidades de inteligência financeira e peritos
+                        criminais.</p>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card glass">
+                        <div class="tool-header">
+                            <i data-lucide="layout-grid"></i>
+                            <h3>Chainalysis / Elliptic</h3>
+                        </div>
+                        <p>Plataformas líderes em análise de blockchain para rastreio de fundos ilícitos em
+                            criptoativos.</p>
+                        <ul class="detail-list">
+                            <li>De-anomização de mixers</li>
+                            <li>Atribuição de endereços a entidades</li>
+                        </ul>
+                    </div>
+                    <div class="tool-card glass">
+                        <div class="tool-header">
+                            <i data-lucide="network"></i>
+                            <h3>Sayari / Sayari Graph</h3>
+                        </div>
+                        <p>Rede global de dados societários para identificar beneficiários finais em estruturas
+                            offshore.</p>
+                        <ul class="detail-list">
+                            <li>Dados cross-border unificados</li>
+                            <li>Identificação de riscos estruturais</li>
+                        </ul>
+                    </div>
+                    <div class="tool-card glass">
+                        <div class="tool-header">
+                            <i data-lucide="search"></i>
+                            <h3>SIs do COAF / SISCOAF</h3>
+                        </div>
+                        <p>O portal oficial de comunicações e inteligência financeira para os setores obrigados no
+                            Brasil.</p>
+                        <ul class="detail-list">
+                            <li>Habilitação e Reporte de ROS</li>
+                            <li>Acesso a orientações setoriais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="report" class="section highlight-bg">
+            <div class="container">
+                <div class="report-box glass">
+                    <div class="report-header">
+                        <i data-lucide="megaphone"></i>
+                        <h2>Canal de Denúncia</h2>
+                    </div>
+                    <p>O combate à lavagem de dinheiro depende da colaboração de todos. Se você suspeita de atividades
+                        ilícitas, utilize os canais oficiais.</p>
+                    <div class="report-links">
+                        <a href="https://www.gov.br/coaf/pt-br" target="_blank" class="report-btn">
+                            <strong>COAF</strong>
+                            <span>Conselho de Controle de Atividades Financeiras</span>
+                        </a>
+                        <a href="https://www.gov.br/pf/pt-br" target="_blank" class="report-btn">
+                            <strong>Polícia Federal</strong>
+                            <span>Crimes contra o sistema financeiro</span>
+                        </a>
+                    </div>
+                    <div class="confidential-badge">
+                        <i data-lucide="lock"></i> Sua denúncia pode ser anônima
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="law" class="section highlight-bg">
+            <div class="container">
+                <div class="law-content glass">
+                    <i data-lucide="gavel" class="big-icon"></i>
+                    <h2>Consequências Legais</h2>
+                    <p>No Brasil, a Lei nº 9.613/98 define os crimes e as penas, que podem variar de 3 a 10 anos de
+                        reclusão, além de multas pesadas e o confisco de bens.</p>
+                    <div class="alert">
+                        <strong>Nota Importante:</strong> Esta página tem caráter estritamente educativo e informativo
+                        para fins de conscientização sobre crimes financeiros.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <span>Ação Comercial</span>
+                        <h2>Proteja sua Instituição Contra Riscos Financeiros</h2>
+                        <p>Nossos especialistas em PLD/FT estão prontos para diagnosticar vulnerabilidades e implementar
+                            protocolos de segurança de elite na sua empresa.</p>
+                    </div>
+                    <div class="cta-btns">
+                        <a href="contato.html" class="btn primary">Falar com um Consultor <i data-lucide="zap"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Referência técnica em inteligência financeira e prevenção à lavagem de dinheiro.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

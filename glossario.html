@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossário e Wiki Técnico | LavagemPro</title>
+    <meta name="description"
+        content="Enciclopédia de termos técnicos sobre Prevenção à Lavagem de Dinheiro e Compliance Financeiro.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="particle-bg"></canvas>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="shield" class="logo-icon"></i>
+                <span>LAVAGEM<span>PRO</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exemplos.html">Métodos</a></li>
+                <li><a href="digital.html">Digital</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="investigacao.html">Investigação</a></li>
+                <li><a href="glossario.html" class="active">Wiki</a></li>
+                <li><a href="contato.html">Consultoria</a></li>
+                <li class="search-nav">
+                    <button id="search-trigger"><i data-lucide="search"></i></button>
+                    <div id="search-input-wrap" class="hidden">
+                        <input type="text" id="global-search" placeholder="Buscar termo...">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero secondary-hero wiki-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Dicionário de Compliance</span>
+                <h1>Wiki / <span class="highlight">Glossário</span></h1>
+                <p>Termos essenciais para desbravar o ecossistema de PLD/FT e regulação financeira.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container wiki-search-wrap">
+            <div class="wiki-controls">
+                <input type="text" id="wiki-search" placeholder="Filtrar termo ou sigla... (ex: RIF, EDD, Hawala)">
+                <div class="wiki-categories">
+                    <button class="cat-btn active" data-cat="all">Todos</button>
+                    <button class="cat-btn" data-cat="reg">Regulação</button>
+                    <button class="cat-btn" data-cat="proc">Processos</button>
+                    <button class="cat-btn" data-cat="tips">Tipologias</button>
+                    <button class="cat-btn" data-cat="tech">Tech/Digital</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="wiki-content" class="section">
+            <div class="container">
+                <div class="wiki-grid" id="wiki-grid">
+                    <!-- Regulação -->
+                    <div class="wiki-card glass" data-term="GAFI" data-cat="reg">
+                        <span class="wiki-tag">Regulação</span>
+                        <h3>GAFI / FATF</h3>
+                        <p>Grupo de Ação Financeira Internacional. É o organismo intergovernamental que define os
+                            padrões globais de PLD/FT.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="COAF" data-cat="reg">
+                        <span class="wiki-tag">Regulação</span>
+                        <h3>COAF</h3>
+                        <p>Conselho de Controle de Atividades Financeiras. A Unidade de Inteligência Financeira (UIF) do
+                            Brasil.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="BACEN" data-cat="reg">
+                        <span class="wiki-tag">Regulação</span>
+                        <h3>BACEN / BCB</h3>
+                        <p>Banco Central do Brasil. Autoridade monetária responsável por regular e fiscalizar o sistema
+                            financeiro nacional.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="CVM" data-cat="reg">
+                        <span class="wiki-tag">Regulação</span>
+                        <h3>CVM</h3>
+                        <p>Comissão de Valores Mobiliários. Fiscaliza o mercado de capitais no Brasil.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="OFAC" data-cat="reg">
+                        <span class="wiki-tag">Regulação</span>
+                        <h3>OFAC</h3>
+                        <p>Office of Foreign Assets Control (EUA). Administra sanções econômicas e comerciais baseadas
+                            na política externa dos EUA.</p>
+                    </div>
+
+                    <!-- Processos -->
+                    <div class="wiki-card glass" data-term="KYC" data-cat="proc">
+                        <span class="wiki-tag">Processos</span>
+                        <h3>KYC (Know Your Customer)</h3>
+                        <p>Diligência para identificar e validar a identidade e o perfil de risco de clientes.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="EDD" data-cat="proc">
+                        <span class="wiki-tag">Processos</span>
+                        <h3>EDD (Enhanced Due Diligence)</h3>
+                        <p>Diligência Aumentada exigida para clientes de alto risco, como PPEs ou jurisdições não
+                            cooperantes.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="KYB" data-cat="proc">
+                        <span class="wiki-tag">Processos</span>
+                        <h3>KYB (Know Your Business)</h3>
+                        <p>Processo focado na identificação dos beneficiários finais e da estrutura societária de
+                            empresas.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="UBO" data-cat="proc">
+                        <span class="wiki-tag">Processos</span>
+                        <h3>UBO (Ultimate Beneficial Owner)</h3>
+                        <p>Beneficiário Final. A pessoa física que efetivamente controla ou se beneficia de uma
+                            entidade.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Compliance" data-cat="proc">
+                        <span class="wiki-tag">Processos</span>
+                        <h3>Compliance</h3>
+                        <p>Estado de estar em conformidade com leis, regulamentos e políticas internas.</p>
+                    </div>
+
+                    <!-- Tipologias -->
+                    <div class="wiki-card glass" data-term="Layering" data-cat="tips">
+                        <span class="wiki-tag">Tipologias</span>
+                        <h3>Layering (Ocultação)</h3>
+                        <p>Segunda fase da lavagem. Consiste em criar camadas complexas de transações para esconder o
+                            rastro do dinheiro.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Smurfing" data-cat="tips">
+                        <span class="wiki-tag">Tipologias</span>
+                        <h3>Smurfing / Fracionamento</h3>
+                        <p>Divisão de grandes quantias em pequenos depósitos para evitar gatilhos de reporte automático.
+                        </p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Hawala" data-cat="tips">
+                        <span class="wiki-tag">Tipologias</span>
+                        <h3>Hawala</h3>
+                        <p>Sistema informal de transferência de fundos baseado em confiança e compensação direta entre
+                            agentes.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Trade-Based" data-cat="tips">
+                        <span class="wiki-tag">Tipologias</span>
+                        <h3>TBML (Trade Based ML)</h3>
+                        <p>Lavagem de dinheiro baseada em comércio, usando faturas superfaturadas ou subfaturadas.</p>
+                    </div>
+
+                    <!-- Tech/Digital -->
+                    <div class="wiki-card glass" data-term="Mixer" data-cat="tech">
+                        <span class="wiki-tag">Tech/Digital</span>
+                        <h3>Mixer / Tumbler</h3>
+                        <p>Serviço que mistura fundos de criptoativos de vários usuários para anonimizar transações.</p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Privacy Coins" data-cat="tech">
+                        <span class="wiki-tag">Tech/Digital</span>
+                        <h3>Privacy Coins</h3>
+                        <p>Criptoativos como Monero (XMR) que utilizam criptografia para ocultar remetentes e valores.
+                        </p>
+                    </div>
+                    <div class="wiki-card glass" data-term="Blockchain" data-cat="tech">
+                        <span class="wiki-tag">Tech/Digital</span>
+                        <h3>Blockchain</h3>
+                        <p>Registro digital imutável e descentralizado que armazena transações de criptoativos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i data-lucide="shield"></i>
+                        <span>LAVAGEM<span>PRO</span></span>
+                    </div>
+                    <p>Enciclopédia técnica de termos e conceitos de conformidade financeira.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Início</a>
+                    <a href="digital.html">Digital</a>
+                    <a href="compliance.html">Compliance</a>
+                    <a href="investigacao.html">Investigação</a>
+                    <a href="contato.html">Consultoria</a>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <p>&copy; 2026 LavagemPro - Inteligência Financeira Avançada</p>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="politicas.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Confidencialidade</a>
+                    <a href="termos.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem;">Engajamento</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        const wikiSearch = document.getElementById('wiki-search');
+        const catBtns = document.querySelectorAll('.cat-btn');
+
+        function filterWiki() {
+            const query = wikiSearch.value.toLowerCase();
+            const activeCatBtn = document.querySelector('.cat-btn.active');
+            const activeCat = activeCatBtn ? activeCatBtn.getAttribute('data-cat') : 'all';
+
+            document.querySelectorAll('.wiki-card').forEach(card => {
+                const term = card.getAttribute('data-term').toLowerCase();
+                const text = card.textContent.toLowerCase();
+                const cat = card.getAttribute('data-cat');
+
+                const matchesSearch = term.includes(query) || text.includes(query);
+                const matchesCat = activeCat === 'all' || cat === activeCat;
+
+                if (matchesSearch && matchesCat) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        if (wikiSearch) {
+            wikiSearch.addEventListener('input', filterWiki);
+        }
+
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterWiki();
+            });
+        });
+    </script>
+</body>
+
+</html>
