@@ -3,7 +3,8 @@ const canvas = document.getElementById('particle-bg');
 if (canvas) {
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const particleCount = 80;
+    const isMobile = window.innerWidth <= 768;
+    const particleCount = isMobile ? 30 : 80;
 
     class Particle {
         constructor() {
@@ -87,12 +88,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Cursor glow effect
+// Cursor glow effect (only on non-touch devices)
 const cursorGlow = document.querySelector('.cursor-glow');
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+if (isTouchDevice && cursorGlow) {
+    cursorGlow.style.display = 'none';
+} else {
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    });
+}
 
 // Mobile Menu Toggle
 const mobileToggle = document.getElementById('mobile-toggle');

@@ -2738,7 +2738,11 @@ h5,
     font-weight: 900;
 }
 
-/* Responsive Overrides */
+/* =============================================
+   RESPONSIVE OVERRIDES — MOBILE OPTIMIZATION
+   ============================================= */
+
+/* 1200px */
 @media (max-width: 1200px) {
     .nav-links {
         gap: 1.2rem;
@@ -2755,7 +2759,12 @@ h5,
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 8px;
     }
 
     .nav-links {
@@ -2815,13 +2824,480 @@ h5,
     }
 }
 
+/* 768px — Mobile padrão */
 @media (max-width: 768px) {
+    /* Container */
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Sections */
+    .section {
+        padding: 5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    /* Hero */
     .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 1rem 2rem;
+    }
+
+    /* Grids — colapso para 1 coluna */
+    .grid-2,
+    .grid-3,
+    .technical-grid,
+    .cyber-grid,
+    .safety-grid,
+    .tech-grid-new,
+    .normative-content,
+    .glossary-grid,
+    .evasão-grid,
+    .doctrine-grid,
+    .foren-grid,
+    .tools-grid,
+    .crypto-grid,
+    .tools-horizontal-scroll,
+    .ros-container,
+    .ubo-model,
+    .sanctions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .card.glass {
+        padding: 2rem;
+    }
+
+    /* Phase items — coluna vertical */
+    .phase-item {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .phase-number {
+        font-size: 3.5rem;
+    }
+
+    .phase-content h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Critical info boxes */
+    .critical-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Timeline horizontal — verticalizar */
+    .timeline-horizontal {
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem 0;
+    }
+
+    .timeline-horizontal::before {
+        top: 0;
+        left: 20px;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, var(--primary), transparent);
+        transform: none;
+    }
+
+    .timeline-node {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+        padding: 0 0 2.5rem 3.5rem;
+        position: relative;
+    }
+
+    .timeline-node .year {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        min-width: 50px;
+    }
+
+    .timeline-node .year::after {
+        top: 0.5rem;
+        left: -2.7rem;
+        transform: none;
+    }
+
+    /* Stats */
+    .stats-infographic {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .stat-item-big .stat-value {
+        font-size: 3.5rem;
+    }
+
+    .stat-item-big .stat-label {
+        font-size: 1.2rem;
+    }
+
+    .stats-grid-mini {
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+
+    /* Simulator */
+    .sim-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .sim-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .simulator-box {
+        padding: 2rem;
+    }
+
+    /* Risk Map */
+    .map-display {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .map-placeholder {
+        height: 280px;
+    }
+
+    .map-controls {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .risk-map-widget {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    /* Quiz */
+    .quiz-container {
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+
+    .quiz-question h3 {
+        font-size: 1.3rem;
+        margin: 1rem 0 1.5rem;
+    }
+
+    /* Checklist */
+    .checklist-box {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-form-wrap {
+        padding: 2rem;
+    }
+
+    /* Global network */
+    .global-network {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* Sanctions radar */
+    .sanctions-radar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .radar-header {
+        white-space: normal;
+    }
+
+    /* Secondary hero */
+    .secondary-hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .secondary-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Method filter */
+    .method-filter {
+        flex-wrap: wrap;
+        border-radius: 20px;
+        gap: 0.5rem;
+    }
+
+    /* Case flow */
+    .case-flow {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .case-flow::after {
+        display: none;
+    }
+
+    /* Instruction box */
+    .instruction-box {
+        padding: 2rem;
+    }
+
+    .instr-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Report */
+    .report-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .report-box {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .report-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Step line */
+    .step-line.horizontal {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* UBO model */
+    .ubo-model {
+        padding: 2rem;
+    }
+
+    .ubo-onion {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* AI box */
+    .ai-item {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Score radial */
+    #sim-score {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Gafi card */
+    .gafi-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Tech item */
+    .tech-item {
+        padding: 2rem;
+    }
+
+    /* Service list */
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 480px — Mobile pequeno / iPhone SE */
+@media (max-width: 480px) {
+    /* Container */
+    .container {
+        padding: 0 1.2rem;
+    }
+
+    /* Section */
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .section-header h2 {
+        font-size: 1.9rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-btns .btn {
+        max-width: 100%;
+    }
+
+    /* Stats */
+    .stat-item-big .stat-value {
+        font-size: 3rem;
+    }
+
+    .mini-stat strong {
+        font-size: 2rem;
+    }
+
+    .stats-grid-mini {
+        gap: 1.5rem;
+    }
+
+    /* Checklist footer */
+    .checklist-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Accordion */
+    .accordion-header {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .accordion-header h4 {
+        font-size: 0.95rem;
+    }
+
+    /* Phase item */
+    .phase-item {
+        padding: 1.5rem;
+    }
+
+    .phase-number {
         font-size: 2.8rem;
     }
 
-    .grid-2 {
-        grid-template-columns: 1fr;
+    /* Card glass */
+    .card.glass {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    /* Quiz btn */
+    .quiz-btn {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* Map controls */
+    .map-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Safety card */
+    .safety-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Tech card */
+    .tech-card-modern {
+        padding: 2rem;
+    }
+
+    /* Filter btn */
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Sanctions radar */
+    .sanctions-radar {
+        padding: 1.2rem;
+    }
+
+    /* Simulator canvas */
+    #sim-canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact form */
+    .contact-form-wrap {
+        padding: 1.5rem;
+    }
+
+    /* Cyber card */
+    .cyber-card {
+        padding: 2rem;
+    }
+
+    /* Norm card */
+    .norm-card {
+        padding: 1.5rem;
+    }
+
+    /* Sanction card */
+    .sanction-card {
+        padding: 2rem;
+    }
+
+    /* Wiki search */
+    #wiki-search {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
